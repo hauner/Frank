@@ -55,7 +55,7 @@ void LogToMemory(NSString *format, ...) {
 		[frankCommandRoute registerCommand:[[[DumpCommand alloc]init]autorelease] withName:@"dump"];
 		[frankCommandRoute registerCommand:[[[MapOperationCommand alloc]init]autorelease] withName:@"map"];
 		[frankCommandRoute registerCommand:[[[OrientationCommand alloc]init]autorelease] withName:@"orientation"];
-		[frankCommandRoute registerCommand:[[[OrientationCommand alloc]init]autorelease] withName:@"exit"];
+		[frankCommandRoute registerCommand:[[[ExitCommand alloc]init]autorelease] withName:@"exit"];
 		[[RequestRouter singleton] registerRoute:frankCommandRoute];
 		
 		StaticResourcesRoute *staticRoute = [[[StaticResourcesRoute alloc] initWithStaticResourceSubDir:bundleName] autorelease];
