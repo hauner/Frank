@@ -97,6 +97,13 @@ module FrankHelper
     return false
   end
 
+  # calling exit in the app will not return any response
+  # so we simply catch the error
+  def frankly_exit
+    get_to_uispec_server('exit')
+  rescue EOFError
+  end
+  
   #taken from Ian Dee's Encumber
   def post_to_uispec_server( verb, command_hash )
     url = frank_url_for( verb )
