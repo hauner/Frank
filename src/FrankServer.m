@@ -16,32 +16,15 @@
 #import "MapOperationCommand.h"
 #import "OrientationCommand.h"
 #import "ExitCommand.h"
-#import "MemoryLogger.h"
-
-void LogToMemory(NSString *format, ...) {
-    if (format == nil) {
-        return;
-    }
-    va_list argList;
-    va_start(argList, format);
-	
-    NSString *s = [[NSString alloc] initWithFormat:format arguments:argList];
-	NSRange range = [s rangeOfString:@"\nClass: "];
-	if( range.location != NSNotFound )
-	{
-		NSString *logline = [s stringByReplacingOccurrencesOfString:@"%%" withString:@"%%%%"];
-		printf("MemLog: %s\n", [logline UTF8String]);
-		[MemoryLogger log: logline];
-		printf("***\nMemory Log Now contains:\n%s\n***\n", [[MemoryLogger getLog] UTF8String]);
-	} else {
-		NSLogv(format, argList);
-	}
-	
-    [s release];
-    va_end(argList);
-}
+#import "AppCommand.h"
+#import "InspectCommand.h"
+#import "AccessibilityCheckCommand.h"
 
 @implementation FrankServer
+
+- (id) initWithDefaultBundle {
+	return [self initWithStaticFrankBundleNamed: @"frank_static_resources"];
+}
 
 - (id) initWithStaticFrankBundleNamed:(NSString *)bundleName
 {
@@ -53,9 +36,12 @@ void LogToMemory(NSString *format, ...) {
 		
 		FrankCommandRoute *frankCommandRoute = [[[FrankCommandRoute alloc] init] autorelease];
 		[frankCommandRoute registerCommand:[[[DumpCommand alloc]init]autorelease] withName:@"dump"];
+		[frankCommandRoute registerCommand:[[[InspectCommand alloc]init]autorelease] withName:@"inspect"];
 		[frankCommandRoute registerCommand:[[[MapOperationCommand alloc]init]autorelease] withName:@"map"];
 		[frankCommandRoute registerCommand:[[[OrientationCommand alloc]init]autorelease] withName:@"orientation"];
 		[frankCommandRoute registerCommand:[[[ExitCommand alloc]init]autorelease] withName:@"exit"];
+		[frankCommandRoute registerCommand:[[[AccessibilityCheckCommand alloc] init]autorelease] withName:@"accessibility_check"];
+		[frankCommandRoute registerCommand:[[[AppCommand alloc] init]autorelease] withName:@"app_exec"];
 		[[RequestRouter singleton] registerRoute:frankCommandRoute];
 		
 		StaticResourcesRoute *staticRoute = [[[StaticResourcesRoute alloc] initWithStaticResourceSubDir:bundleName] autorelease];

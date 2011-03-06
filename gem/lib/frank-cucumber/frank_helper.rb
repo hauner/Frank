@@ -1,7 +1,9 @@
 require 'net/http'
 require 'json'
 
-module FrankHelper
+module Frank module Cucumber
+
+module FrankHelper 
 
   def touch( uiquery )
     views_touched = frankly_map( uiquery, 'touch' )
@@ -16,12 +18,12 @@ module FrankHelper
   end
 
   def check_element_exists( query )
-    puts "checking #{query} exists..."
+    #puts "checking #{query} exists..."
     element_exists( query ).should be_true
   end
 
   def check_element_does_not_exist( query )
-    puts "checking #{query} does not exist..."
+    #puts "checking #{query} does not exist..."
     element_exists( query ).should be_false
   end
 
@@ -33,6 +35,32 @@ module FrankHelper
     check_element_exists( "view marked:'#{expected_mark}'" )
   end
 
+  # a better name would be element_exists_and_is_not_hidden
+  def element_is_not_hidden(query)
+     matches = frankly_map( query, 'isHidden' )
+     matches.delete(true)
+     !matches.empty?
+  end
+
+  def app_exec(method_name, *method_args)
+    operation_map = {
+      :method_name => method_name,
+      :arguments => method_args
+    }
+    
+    before = Time.now
+    res = post_to_uispec_server( 'app_exec', :operation => operation_map )
+    logger.debug( "MAP applying #{method_name} with args:( #{method_args.inspect} ) to 'Application Delegate' took #{Time.now - before} seconds" )
+
+    res = JSON.parse( res )
+    if res['outcome'] != 'SUCCESS'
+      raise "app_exec #{method_name} failed because: #{res['reason']}\n#{res['details']}"
+    end
+
+    res['results']
+  end
+  
+  
   def frankly_map( query, method_name, *method_args )
     operation_map = {
       :method_name => method_name,
@@ -65,10 +93,16 @@ module FrankHelper
     JSON.parse( res )['orientation']
   end
 
+
+  def frankly_is_accessibility_enabled
+    res = get_to_uispec_server( 'accessibility_check' )
+    JSON.parse( res )['accessibility_enabled'] == 'true'
+  end
+
   def wait_for_frank_to_come_up
     num_consec_successes = 0
     num_consec_failures = 0
-    Timeout.timeout(60) do
+    Timeout.timeout(20) do
       while num_consec_successes <= 6
         if frankly_ping
           num_consec_failures = 0
@@ -86,8 +120,12 @@ module FrankHelper
       end
       puts ''
     end
-  end
 
+    unless frankly_is_accessibility_enabled
+      raise "ACCESSIBILITY DOES NOT APPEAR TO BE ENABLED ON YOUR SIMULATOR. Hit the home button, go to settings, select Accessibility, and turn the inspector on."
+    end
+  end
+  
   def frankly_ping
     get_to_uispec_server('')
     return true
@@ -154,19 +192,10 @@ module FrankHelper
   APPLESCRIPT}  
   end
   
-  def launch_app_in_simulator
-    %x{osascript<<APPLESCRIPT
-application "iPhone Simulator" quit
-tell application "Xcode"
-	set myprojectdocument to active project document
-	set myproject to project of myprojectdocument
-	tell myproject
-		launch
-	end tell
-end tell
-application "iPhone Simulator" activate
-  APPLESCRIPT}
-    sleep 5 # TODO: replace this with polling for the frank server
+  def quit_simulator
+    %x{osascript<<APPLESCRIPT-
+      application "iPhone Simulator" quit
+    APPLESCRIPT}
   end
 
   #Note this needs to have "Enable access for assistive devices"
@@ -196,4 +225,18 @@ end tell
     simulator_hardware_menu_press "Shake Gesture"
   end
   
+  def simulate_memory_warning
+    simulator_hardware_menu_press "Simulate Memory Warning"
+  end
+  
+  def toggle_call_status_bar
+    simulator_hardware_menu_press "Toggle In-Call Status Bar"
+  end
+  
+  def simulate_hardware_keyboard
+    simulator_hardware_menu_press "Simulate Hardware Keyboard"
+  end
 end
+
+
+end end

@@ -14,6 +14,7 @@
 		2860E32E111B888700E27156 /* AppDelegate_Pad.m in Sources */ = {isa = PBXBuildFile; fileRef = 2860E32C111B888700E27156 /* AppDelegate_Pad.m */; };
 		2860E32F111B888700E27156 /* MainWindow_Pad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2860E32D111B888700E27156 /* MainWindow_Pad.xib */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		D63AE37F12BD9627008EB8DE /* InspectCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = D63AE37E12BD9627008EB8DE /* InspectCommand.m */; };
 		D64EF8F911D3C332002A8749 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D64EF8F811D3C332002A8749 /* main.m */; };
 		D69A0B0F124C2ED900BEC9EC /* OrientationCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A0B0E124C2ED900BEC9EC /* OrientationCommand.m */; };
 		D6A833ED11CDBF35001B8585 /* PureMVC_ObjectiveC_1_1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A833B411CDBF35001B8585 /* PureMVC_ObjectiveC_1_1.a */; };
@@ -118,13 +119,15 @@
 		D6A8367811CDC594001B8585 /* FrankCommandRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A8363911CDC594001B8585 /* FrankCommandRoute.m */; };
 		D6A8367911CDC594001B8585 /* FrankServer.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A8363B11CDC594001B8585 /* FrankServer.m */; };
 		D6A8367A11CDC594001B8585 /* MapOperationCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A8363D11CDC594001B8585 /* MapOperationCommand.m */; };
-		D6A8367B11CDC594001B8585 /* MemoryLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A8363F11CDC594001B8585 /* MemoryLogger.m */; };
 		D6A8367C11CDC594001B8585 /* RequestRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A8364111CDC594001B8585 /* RequestRouter.m */; };
 		D6A8367D11CDC594001B8585 /* RoutingHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A8364311CDC594001B8585 /* RoutingHTTPConnection.m */; };
 		D6A8367E11CDC594001B8585 /* StaticResourcesRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A8364511CDC594001B8585 /* StaticResourcesRoute.m */; };
 		D6A8367F11CDC594001B8585 /* UISpecCommandReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A8364711CDC594001B8585 /* UISpecCommandReceiver.m */; };
 		D6A8368311CDC5BA001B8585 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A8368211CDC5BA001B8585 /* CFNetwork.framework */; };
 		D6A8368C11CDC755001B8585 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		D6AE0919128CA0C000CDC4C4 /* AppCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = D6AE0918128CA0C000CDC4C4 /* AppCommand.m */; };
+		D6C73C8B1321BB2F00C731A2 /* AccessibilityCheckCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C73C8A1321BB2F00C731A2 /* AccessibilityCheckCommand.m */; };
+		D6C73C9E1321BB5D00C731A2 /* AccessibilityCheckCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C73C8A1321BB2F00C731A2 /* AccessibilityCheckCommand.m */; };
 		D6D79B5711D7FB7C003E0E60 /* Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D79B5611D7FB7C003E0E60 /* Operation.m */; };
 		D6D79B7611D7FC73003E0E60 /* frank_static_resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D6D79B7511D7FC73003E0E60 /* frank_static_resources.bundle */; };
 /* End PBXBuildFile section */
@@ -143,6 +146,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Shared/main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* EmployeeAdmin_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeAdmin_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* EmployeeAdmin-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EmployeeAdmin-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		D63AE37E12BD9627008EB8DE /* InspectCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InspectCommand.m; sourceTree = "<group>"; };
 		D64EF8F811D3C332002A8749 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D69A0B0D124C2ED900BEC9EC /* OrientationCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrientationCommand.h; sourceTree = "<group>"; };
 		D69A0B0E124C2ED900BEC9EC /* OrientationCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrientationCommand.m; sourceTree = "<group>"; };
@@ -314,8 +318,6 @@
 		D6A8363B11CDC594001B8585 /* FrankServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrankServer.m; sourceTree = "<group>"; };
 		D6A8363C11CDC594001B8585 /* MapOperationCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapOperationCommand.h; sourceTree = "<group>"; };
 		D6A8363D11CDC594001B8585 /* MapOperationCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOperationCommand.m; sourceTree = "<group>"; };
-		D6A8363E11CDC594001B8585 /* MemoryLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryLogger.h; sourceTree = "<group>"; };
-		D6A8363F11CDC594001B8585 /* MemoryLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryLogger.m; sourceTree = "<group>"; };
 		D6A8364011CDC594001B8585 /* RequestRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestRouter.h; sourceTree = "<group>"; };
 		D6A8364111CDC594001B8585 /* RequestRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestRouter.m; sourceTree = "<group>"; };
 		D6A8364211CDC594001B8585 /* RoutingHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutingHTTPConnection.h; sourceTree = "<group>"; };
@@ -325,6 +327,10 @@
 		D6A8364611CDC594001B8585 /* UISpecCommandReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISpecCommandReceiver.h; sourceTree = "<group>"; };
 		D6A8364711CDC594001B8585 /* UISpecCommandReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISpecCommandReceiver.m; sourceTree = "<group>"; };
 		D6A8368211CDC5BA001B8585 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D6AE0917128CA0C000CDC4C4 /* AppCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCommand.h; sourceTree = "<group>"; };
+		D6AE0918128CA0C000CDC4C4 /* AppCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppCommand.m; sourceTree = "<group>"; };
+		D6C73C891321BB2F00C731A2 /* AccessibilityCheckCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessibilityCheckCommand.h; sourceTree = "<group>"; };
+		D6C73C8A1321BB2F00C731A2 /* AccessibilityCheckCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessibilityCheckCommand.m; sourceTree = "<group>"; };
 		D6D79B5511D7FB7C003E0E60 /* Operation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operation.h; sourceTree = "<group>"; };
 		D6D79B5611D7FB7C003E0E60 /* Operation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Operation.m; sourceTree = "<group>"; };
 		D6D79B7511D7FC73003E0E60 /* frank_static_resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = frank_static_resources.bundle; path = ../../frank_static_resources.bundle; sourceTree = SOURCE_ROOT; };
@@ -787,6 +793,11 @@
 		D6A8363511CDC594001B8585 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				D6C73C891321BB2F00C731A2 /* AccessibilityCheckCommand.h */,
+				D6C73C8A1321BB2F00C731A2 /* AccessibilityCheckCommand.m */,
+				D63AE37E12BD9627008EB8DE /* InspectCommand.m */,
+				D6AE0917128CA0C000CDC4C4 /* AppCommand.h */,
+				D6AE0918128CA0C000CDC4C4 /* AppCommand.m */,
 				D69A0B0D124C2ED900BEC9EC /* OrientationCommand.h */,
 				D69A0B0E124C2ED900BEC9EC /* OrientationCommand.m */,
 				D6D79B5511D7FB7C003E0E60 /* Operation.h */,
@@ -799,8 +810,6 @@
 				D6A8363B11CDC594001B8585 /* FrankServer.m */,
 				D6A8363C11CDC594001B8585 /* MapOperationCommand.h */,
 				D6A8363D11CDC594001B8585 /* MapOperationCommand.m */,
-				D6A8363E11CDC594001B8585 /* MemoryLogger.h */,
-				D6A8363F11CDC594001B8585 /* MemoryLogger.m */,
 				D6A8364011CDC594001B8585 /* RequestRouter.h */,
 				D6A8364111CDC594001B8585 /* RequestRouter.m */,
 				D6A8364211CDC594001B8585 /* RoutingHTTPConnection.h */,
@@ -858,7 +867,14 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "EmployeeAdmin" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -922,6 +938,7 @@
 				D6A8340211CDBF35001B8585 /* UserListMediator.m in Sources */,
 				D6A8340311CDBF35001B8585 /* UserRolesMediator.m in Sources */,
 				D6A8368C11CDC755001B8585 /* main.m in Sources */,
+				D6C73C9E1321BB5D00C731A2 /* AccessibilityCheckCommand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1001,7 +1018,6 @@
 				D6A8367811CDC594001B8585 /* FrankCommandRoute.m in Sources */,
 				D6A8367911CDC594001B8585 /* FrankServer.m in Sources */,
 				D6A8367A11CDC594001B8585 /* MapOperationCommand.m in Sources */,
-				D6A8367B11CDC594001B8585 /* MemoryLogger.m in Sources */,
 				D6A8367C11CDC594001B8585 /* RequestRouter.m in Sources */,
 				D6A8367D11CDC594001B8585 /* RoutingHTTPConnection.m in Sources */,
 				D6A8367E11CDC594001B8585 /* StaticResourcesRoute.m in Sources */,
@@ -1009,6 +1025,9 @@
 				D64EF8F911D3C332002A8749 /* main.m in Sources */,
 				D6D79B5711D7FB7C003E0E60 /* Operation.m in Sources */,
 				D69A0B0F124C2ED900BEC9EC /* OrientationCommand.m in Sources */,
+				D6AE0919128CA0C000CDC4C4 /* AppCommand.m in Sources */,
+				D63AE37F12BD9627008EB8DE /* InspectCommand.m in Sources */,
+				D6C73C8B1321BB2F00C731A2 /* AccessibilityCheckCommand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1030,6 +1049,7 @@
 					"\"$(SRCROOT)/Shared/lib/PureMVC\"",
 				);
 				PRODUCT_NAME = EmployeeAdmin;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -1096,6 +1116,7 @@
 					"\\\"$(SRCROOT)/Shared/lib/PureMVC\\\"",
 				);
 				PRODUCT_NAME = EmployeeAdmin;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
